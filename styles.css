@@ -160,7 +160,10 @@ footer p {
         15px 14.6px 55.1px rgba(255, 30, 30, 0.26),
         36px 35px 132px rgba(225, 30, 30, 0.22);
 }
-
+.card:hover{
+    transform: scale(103%);
+    transition: ease-in-out .2s;
+}
 .card-img {
     background-color: chartreuse;
     width: 368px;
@@ -300,6 +303,17 @@ footer p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+.cal-card:hover{
+    transform: scale(103%);
+    transition: ease-in-out .2s;
+    box-shadow:
+    1px 1px 3.7px rgba(225, 30, 30, 0.084),
+    2.4px 2.3px 8.8px rgba(225, 30, 30, 0.088),
+    4.5px 4.4px 16.5px rgba(225, 30, 30, 0.36),
+    8px 7.8px 29.5px rgba(255, 30, 30, 0.072),
+    15px 14.6px 55.1px rgba(255, 30, 30, 0.26),
+    36px 35px 132px rgba(225, 30, 30, 0.22);
 }
 .calcard-img {
     background-color: chartreuse;
