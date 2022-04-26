@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat';
+    width: 100%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+}
+.logo {
+    margin: 5px 10px;
+}
+.logo img {
+    width: 75px;
+}
+nav{
+    justify-self: flex-end
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0px 20px;
+    transition: color .25s;
+}
+nav :hover {
+    color: crimson;
+
+}
+.bg-container {
+    display: flex;
+    width: auto;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.bg-img {
+    background-image: url(./assets/wp6_2.jpg);
+    background-size: cover;
+    transform: translateY(-8%);
+    filter: blur(2px);
+    height: 110vh;
+    width: 110vw;
+    background-position: center;
+}
+.main-logo {
+    position: absolute;
+    z-index: 0;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 5.5em;
+    color: crimson;
+    top: 25%;
+}
+main {
+    margin: 20px;
+    min-height: calc(100vh - 5vh);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 80px 80px 1fr;
+    grid-template-areas:
+        "h2-grid h2-grid h2-grid h2-grid"
+        "h3-grid h3-grid h3-grid h3-grid"
+        "noticias noticias imagen imagen";
+    grid-gap: 10px 0px;
+    justify-items: center;
+}
+h2,
+.h2-grid {
+    text-align: center;
+    font-size: 56px;
+    text-decoration: underline 10px solid crimson;
+    grid-area: h2-grid;
+    padding: 10px;
+}
+
+.h3-grid {
+    grid-area: h3-grid;
+}
+
+.noticias {
+    grid-area: noticias;
+    width: 100%;
+}
+
+h3,
+p {
+    text-align: justify;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen {
+    grid-area: imagen;
+    align-content: center;
+    background-image: url(./assets/wp1_0.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    background-color: crimson;
+    font-family: 'montserrat', sans-serif;
+    justify-content: end;
+}
+
+footer p {
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+
+
+
+/* Equipo */
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    background: rgb(220, 20, 60);
+    width: 400px;
+    height: 700px;
+    border-radius: 10px;
+    margin: 20px;
+    background: crimson;
+    box-shadow:
+        1px 1px 3.7px rgba(225, 30, 30, 0.084),
+        2.4px 2.3px 8.8px rgba(225, 30, 30, 0.088),
+        4.5px 4.4px 16.5px rgba(225, 30, 30, 0.36),
+        8px 7.8px 29.5px rgba(255, 30, 30, 0.072),
+        15px 14.6px 55.1px rgba(255, 30, 30, 0.26),
+        36px 35px 132px rgba(225, 30, 30, 0.22);
+}
+
+.card-img {
+    background-color: chartreuse;
+    width: 368px;
+    height: 368px;
+    margin: 15px;
+    justify-content: center;
+}
+
+.card-img-1 {
+    background-image: url(./assets/guenther-steiner-team-principa-1.jpg);
+    background-size: cover;
+}
+
+.card-img-2 {
+    background-image: url(./assets/perfil-kevin-magnussen-2022-soymotor.png);
+}
+
+.card-img-3 {
+    background-image: url(./assets/mick-schumacher-2021-soymotor.jpg);
+}
+
+.card-title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.card-h5 {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.teamcard-p {
+    margin: 5px 15px;
+    font-size: 18px;
+    color: white;
+    height: auto;
+    width: auto;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* GALERIA */
+.grid-fotos {
+    display: flex;
+    background-color: crimson;
+    justify-content: space-evenly;
+}
+
+/* CALENDARIO */
+.calendario-titulo{
+    justify-content: center;
+    margin: 5vh 0px;
+    width: 100%;
+    font-size: 3em;
+    text-decoration: underline 10px solid crimson;
+}
+.container-grid {
+    display: grid;
+    box-sizing: border-box;
+    width: 90%;
+    grid-template-areas:"card1 card2 card3 card4"
+                        "card5 card6 card7 card8"
+                        "card9 card10 card11 card12";
+    gap: 25px;
+    margin: auto;
+    justify-items: center;
+}
+
+.cal-card1 {
+    grid-area: card1;
+}
+
+.cal-card2 {
+    grid-area: card2;
+}
+
+.cal-card3 {
+    grid-area: card3;
+}
+
+.cal-card4 {
+    grid-area: card4;
+}
+
+.cal-card5 {
+    grid-area: card5;
+}
+
+.cal-card6 {
+    grid-area: card6;
+}
+
+.cal-card7 {
+    grid-area: card7;
+}
+
+.cal-card8 {
+    grid-area: card8;
+}
+
+.cal-card9 {
+    grid-area: card9;
+}
+
+.cal-card10 {
+    grid-area: card10;
+}
+
+.cal-card11 {
+    grid-area: card11;
+}
+.cal-card12{
+    grid-area: card12;
+}
+.cal-card1,
+.cal-card2,
+.cal-card3,
+.cal-card4,
+.cal-card5,
+.cal-card6,
+.cal-card7,
+.cal-card8,
+.cal-card9,
+.cal-card10,
+.cal-card11,
+.cal-card12 {
+    border-radius: 10px;
+    background-color: crimson;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.calcard-img {
+    background-color: chartreuse;
+    background-size: cover;
+    width: 368px;
+    height: 368px;
+    margin: 20px;
+}
+
+.calcard-img-1 {
+    background-image: url(./assets/saudiarabiagp.jpg);
+    background-size: cover;
+}
+
+.calcard-img-2 {
+    background-image: url(./assets/melbournegp.jpg);
+}
+
+.calcard-img-3 {
+    background-image: url(./assets/imolagp.jpg);
+    
+}
+.calcard-title {
+    color: rgb(250, 250, 250);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+}
+.calcard-subtitle {
+    color: rgb(15, 15, 15);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8em;
+    width: 100%;
+}
+.card-p {
+    color: rgb(250, 250, 250);
+    font-size: 1em;
+    width: 90%;
+    height: fit-content;
+    margin: 5px;
+    padding: 5px;
+    text-align: justify;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+    /*INICIO*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 80px 80px 1fr 1fr;
+        grid-template-areas:
+            "h2-grid h2-grid h2-grid h2-grid"
+            "h3-grid h3-grid h3-grid h3-grid"
+            "imagen imagen imagen imagen"
+            "noticias noticias noticias noticias";
+        grid-gap: 10px 0px;
+        justify-items: center;
+    }
+    h2,
+    .h2-grid {
+        text-align: center;
+        font-size: 56px;
+        text-decoration: underline 10px solid crimson;
+        grid-area: h2-grid;
+        padding: 10px;
+    }
+    
+    .h3-grid {
+        grid-area: h3-grid;
+    }
+    
+    .noticias {
+        grid-area: noticias;
+        width: 100%;
+    }
+    
+    h3,
+    p {
+        text-align: justify;
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .imagen {
+        grid-area: imagen;
+        align-content: center;
+        background-image: url(./assets/wp1_0.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        object-fit: cover;
+    }
+    /*CALENDARIO*/
+    .calendario-titulo{
+        text-align: center;
+        margin: 5vh 0px;
+        width: 100%;
+        font-size: 3em;
+        text-decoration: underline 10px solid crimson;
+    }
+    .container-grid {
+        display: grid;
+        box-sizing: border-box;
+        width: 95%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:"card1 card2 card3"
+                            "card4 card5 card6"
+                            "card7 card8 card9"
+                            "card10 card11 card12";
+        gap: 25px;
+        margin: auto;
+        justify-items: space-around;
+    }
+
+}
+@media screen and (max-width: 425px){
+    /*NAV*/
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+        z-index: 2;
+        background-color: rgba(255, 255, 255);
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    nav{
+        justify-self: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+    nav a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 0px 20px;
+        transition: color .25s;
+    }
+        /*INICIO*/
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: 2em 2em 1fr 1fr;
+            grid-template-areas:
+                "h2-grid h2-grid h2-grid h2-grid"
+                "h3-grid h3-grid h3-grid h3-grid"
+                "imagen imagen imagen imagen"
+                "noticias noticias noticias noticias";
+            grid-gap: 10px 0px;
+            justify-items: center;
+        }
+        h2,
+        .h2-grid {
+            text-align: center;
+            font-size: 1.5em;
+            text-decoration: underline 10px solid crimson;
+            grid-area: h2-grid;
+            padding: 10px;
+        }
+        
+        .h3-grid {
+            grid-area: h3-grid;
+        }
+        
+        .noticias {
+            grid-area: noticias;
+            width: 100%;
+        }
+        
+        h3,
+        p {
+            text-align: justify;
+            font-size: 1em;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .imagen {
+            grid-area: imagen;
+            align-content: center;
+            background-image: url(./assets/wp1_0.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 45vh;
+            width: 100%;
+            object-fit: cover;
+        }
+    /*CALENDARIO*/
+    .calendario-titulo{
+        text-align: center;
+        margin: 5vh 0px;
+        width: 100%;
+        font-size: 3em;
+        text-decoration: underline 10px solid crimson;
+    }
+    .container-grid {
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(1, 80vw);
+        grid-template-rows: repeat(12, 40vh);
+        grid-template-areas:"card1"
+                            "card2"
+                            "card3"
+                            "card4"
+                            "card5"
+                            "card6"
+                            "card7"
+                            "card8"
+                            "card9"
+                            "card10"
+                            "card11"
+                            "card12";
+        gap: 10px;
+        justify-content: center;
+        margin: auto
+    }
+    .calcard-img {
+        background-color: chartreuse;
+        width: 85%;
+        height: 60%;
+        margin: 5%;
+        object-fit: cover;
+        background-position: center;
+    }
+    .calcard-title {
+        color: rgb(250, 250, 250);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .calcard-subtitle {
+        color: rgb(15, 15, 15);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+    }
+    .card-p {
+        color: rgb(250, 250, 250);
+        font-size: .6em;
+        width: 90%;
+        height: fit-content;
+        margin: 5px;
+        padding: 5px;
+        text-align: justify;
+        justify-content: center;
+    }
+}
